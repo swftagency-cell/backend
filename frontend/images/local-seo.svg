@@ -1,0 +1,87 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="localBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#004080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="locationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8E8E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#localBg)"/>
+  
+  <!-- Map background -->
+  <rect x="60" y="50" width="280" height="150" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  
+  <!-- Map grid -->
+  <g opacity="0.3">
+    <line x1="60" y1="80" x2="340" y2="80" stroke="white" stroke-width="0.5"/>
+    <line x1="60" y1="110" x2="340" y2="110" stroke="white" stroke-width="0.5"/>
+    <line x1="60" y1="140" x2="340" y2="140" stroke="white" stroke-width="0.5"/>
+    <line x1="60" y1="170" x2="340" y2="170" stroke="white" stroke-width="0.5"/>
+    <line x1="120" y1="50" x2="120" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="180" y1="50" x2="180" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="240" y1="50" x2="240" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="300" y1="50" x2="300" y2="200" stroke="white" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Location pins -->
+  <g>
+    <!-- Main business location -->
+    <path d="M 200 90 Q 200 80 210 80 Q 220 80 220 90 Q 220 100 210 110 Q 200 100 200 90" fill="url(#locationGradient)"/>
+    <circle cx="210" cy="90" r="4" fill="white"/>
+    <circle cx="210" cy="125" r="15" fill="rgba(255,107,107,0.3)">
+      <animate attributeName="r" values="15;25;15" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Competitor locations -->
+    <path d="M 140 120 Q 140 115 145 115 Q 150 115 150 120 Q 150 125 145 130 Q 140 125 140 120" fill="#00D4FF"/>
+    <circle cx="145" cy="120" r="2" fill="white"/>
+    
+    <path d="M 270 100 Q 270 95 275 95 Q 280 95 280 100 Q 280 105 275 110 Q 270 105 270 100" fill="#00CC99"/>
+    <circle cx="275" cy="100" r="2" fill="white"/>
+    
+    <path d="M 160 160 Q 160 155 165 155 Q 170 155 170 160 Q 170 165 165 170 Q 160 165 160 160" fill="#FFD93D"/>
+    <circle cx="165" cy="160" r="2" fill="white"/>
+  </g>
+  
+  <!-- Search radius -->
+  <circle cx="210" cy="125" r="40" fill="none" stroke="rgba(255,107,107,0.5)" stroke-width="2" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Local search elements -->
+  <g transform="translate(80, 70)">
+    <!-- Search bar -->
+    <rect x="0" y="0" width="120" height="20" rx="10" fill="white" opacity="0.9"/>
+    <text x="10" y="13" fill="#666" font-family="Arial, sans-serif" font-size="10">"restaurants near me"</text>
+    
+    <!-- Search icon -->
+    <circle cx="105" cy="10" r="6" fill="none" stroke="#666" stroke-width="1.5"/>
+    <line x1="109" y1="14" x2="113" y2="18" stroke="#666" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Local business info -->
+  <g transform="translate(250, 160)">
+    <rect x="0" y="0" width="80" height="30" rx="5" fill="rgba(255,255,255,0.9)"/>
+    <text x="5" y="12" fill="#333" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Swift Agency</text>
+    <text x="5" y="22" fill="#666" font-family="Arial, sans-serif" font-size="7">★★★★★ 4.9 (127)</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="230" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Local SEO
+  </text>
+  
+  <!-- Floating elements -->
+  <circle cx="50" cy="80" r="8" fill="rgba(0,212,255,0.2)">
+    <animate attributeName="cy" values="80;70;80" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="180" r="6" fill="rgba(255,255,255,0.2)">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

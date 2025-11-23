@@ -1,0 +1,74 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="perfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001E3D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FF88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00CC66;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#perfBg)"/>
+  
+  <!-- Speedometer -->
+  <g transform="translate(200, 125)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
+    
+    <!-- Speed arc -->
+    <path d="M -42.43 -42.43 A 60 60 0 0 1 42.43 -42.43" 
+          fill="none" stroke="url(#speedGradient)" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Needle -->
+    <line x1="0" y1="0" x2="35" y2="-35" stroke="#00FF88" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="5" fill="#00FF88"/>
+    
+    <!-- Speed indicators -->
+    <text x="0" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">95</text>
+    <text x="0" y="40" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="10">Score</text>
+  </g>
+  
+  <!-- Performance metrics -->
+  <g transform="translate(50, 50)">
+    <!-- Loading bars -->
+    <rect x="0" y="0" width="80" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="0" width="70" height="8" rx="4" fill="url(#speedGradient)"/>
+    <text x="85" y="8" fill="white" font-family="Arial, sans-serif" font-size="10">Load Time</text>
+    
+    <rect x="0" y="20" width="80" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="20" width="75" height="8" rx="4" fill="#00D4FF"/>
+    <text x="85" y="28" fill="white" font-family="Arial, sans-serif" font-size="10">First Paint</text>
+    
+    <rect x="0" y="40" width="80" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="40" width="65" height="8" rx="4" fill="#00CC99"/>
+    <text x="85" y="48" fill="white" font-family="Arial, sans-serif" font-size="10">Interactive</text>
+  </g>
+  
+  <!-- Code optimization icon -->
+  <g transform="translate(300, 60)">
+    <rect x="0" y="0" width="60" height="40" rx="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <text x="30" y="15" text-anchor="middle" fill="#00FF88" font-family="monospace" font-size="8">&lt;/&gt;</text>
+    <text x="30" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">Optimized</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="220" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Web Performance
+  </text>
+  
+  <!-- Speed lines -->
+  <g opacity="0.6">
+    <line x1="320" y1="120" x2="350" y2="115" stroke="#00FF88" stroke-width="2">
+      <animate attributeName="x2" values="350;370;350" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="320" y1="125" x2="360" y2="120" stroke="#00FF88" stroke-width="2">
+      <animate attributeName="x2" values="360;380;360" dur="1.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="320" y1="130" x2="355" y2="125" stroke="#00FF88" stroke-width="2">
+      <animate attributeName="x2" values="355;375;355" dur="0.8s" repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>

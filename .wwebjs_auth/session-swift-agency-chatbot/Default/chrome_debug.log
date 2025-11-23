@@ -1,0 +1,107 @@
+[1119/142314.602:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yD/r/RiTEcO_KS4F.js (113)
+[1119/142325.268:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
+[1119/142325.269:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
+[1119/142325.269:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
+[1119/142325.270:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
+[1119/142325.271:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
+[1119/142325.271:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
+[1119/142325.271:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
+[1119/142325.271:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
+[1119/142325.272:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
+[1119/142325.272:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
+[1119/142325.273:INFO:CONSOLE(0)] "Document-Policy HTTP header: Unrecognized document policy feature name include-js-call-stacks-in-crash-reports.", source: https://web.whatsapp.com/ (0)
+[1119/142342.312:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/142446.566:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/142628.379:INFO:CONSOLE(77)] "ErrorUtils caught an error:
+
+window is not defined
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yu/r/4wLJsIo9jix.js (77)
+[1119/142629.841:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/142718.903:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/142839.195:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/143050.686:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/143422.313:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/143753.417:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/144124.527:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/144455.579:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/144826.682:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/145157.725:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/145529.089:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/145626.692:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/154856.036:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/155238.118:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/155609.341:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/155941.151:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/160312.246:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/160643.356:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/161014.444:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/161345.669:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/161717.145:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/162048.709:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/162421.252:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/162752.606:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/163124.470:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/163456.146:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/163828.247:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/164159.696:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/164531.400:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/164903.110:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/165109.575:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/165234.836:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/165606.383:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/165822.805:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/170211.592:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/170543.867:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/170915.242:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/171246.675:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/171618.630:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/171949.303:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/172237.063:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/172321.053:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1119/172527.781:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/022654.253:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/022656.291:WARNING:dns_config_service_win.cc(584)] Failed to read DnsConfig.
+[1120/023036.759:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/023408.013:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/023739.531:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/024111.138:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/024312.156:ERROR:cache_util_win.cc(20)] Unable to move the cache: Access is denied. (0x5)
+[1120/024312.160:ERROR:disk_cache.cc(205)] Unable to create cache
+[1120/024312.160:ERROR:gpu_disk_cache.cc(673)] Gpu Cache Creation failed: -2
+[1120/024312.188:ERROR:cache_util_win.cc(20)] Unable to move the cache: Access is denied. (0x5)
+[1120/024312.189:ERROR:disk_cache.cc(205)] Unable to create cache
+[1120/024312.189:ERROR:gpu_disk_cache.cc(673)] Gpu Cache Creation failed: -2
+[1120/024314.024:ERROR:cache_util_win.cc(20)] Unable to move the cache: Access is denied. (0x5)
+[1120/024314.025:ERROR:disk_cache.cc(205)] Unable to create cache
+[1120/024314.964:ERROR:service_worker_storage.cc(1933)] Failed to delete the database: Database IO error
+[1120/024316.128:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
+[1120/024316.128:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
+[1120/024316.129:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
+[1120/024316.130:INFO:CONSOLE(0)] "Document-Policy HTTP header: Unrecognized document policy feature name include-js-call-stacks-in-crash-reports.", source: https://web.whatsapp.com/ (0)
+[1120/024325.408:ERROR:quota_database.cc(929)] Could not open the quota database, resetting.
+[1120/024333.486:ERROR:quota_database.cc(929)] Could not open the quota database, resetting.
+[1120/024414.796:ERROR:quota_database.cc(931)] Failed to reset the quota database.
+[1120/024414.796:ERROR:quota_database.cc(931)] Failed to reset the quota database.
+[1120/024516.604:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/024616.889:INFO:CONSOLE(77)] "ErrorUtils caught an error:
+
+page-load-validation-missing-wam-incomplete-ws-timing
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yu/r/4wLJsIo9jix.js (77)
+[1120/024805.995:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/024948.851:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/025150.579:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/025540.780:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/025913.262:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/030058.303:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/ZWij9qsFDuy.js (113)
+[1120/190004.541:WARNING:dns_config_service_win.cc(584)] Failed to read DnsConfig.
+[1120/190004.691:WARNING:dns_config_service_win.cc(584)] Failed to read DnsConfig.
+[1120/190034.622:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/7S861K8SL9t.js (113)

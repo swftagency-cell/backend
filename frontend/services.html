@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Swift Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <ul>
+            <div class="logo">
+                <li><a href="index.html">SWIFT AGENCY</a></li>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About US</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html">work with us</a></li>
+            </div> 
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 col-md-8 mx-auto text-center">
+                    <div class="hero-content animate-on-scroll">
+                        <div class="hero-badge mb-4">
+                            <i class="fas fa-rocket"></i>
+                            <span>Premium Digital Solutions</span>
+                        </div>
+                        <h1 class="hero-title mb-4">
+                            Transform Your Business with 
+                            <span class="text-gradient">Expert Services</span>
+                        </h1>
+                        <p class="hero-description mb-5">
+                            From cutting-edge web development to strategic digital marketing, 
+                            we deliver comprehensive solutions that drive real results for your business.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#services-grid" class="btn btn-primary btn-lg me-3 smooth-scroll">
+                                <i class="fas fa-eye"></i> Explore Services
+                            </a>
+                            <a href="enquiry.html" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope"></i> Get Quote
+                            </a>
+                        </div>
+                        <div class="hero-stats mt-5">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number" data-count="150">10</h3>
+                                        <p class="stat-label">Projects</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number" data-count="98">8</h3>
+                                        <p class="stat-label">Success Rate</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number" data-count="24">0</h3>
+                                        <p class="stat-label">Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section id="services-grid" class="services-grid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <div class="section-header animate-on-scroll">
+                        <span class="section-badge">Our Expertise</span>
+                        <h2 class="section-title">Comprehensive Digital Solutions</h2>
+                        <p class="section-description">
+                            We offer a full spectrum of digital services designed to elevate your brand 
+                            and accelerate your business growth in the digital landscape.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="web-development">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-description">
+                                Custom websites and web applications built with modern technologies 
+                                for optimal performance and user experience.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Responsive Design</li>
+                                <li><i class="fas fa-check"></i> Modern Frameworks</li>
+                                <li><i class="fas fa-check"></i> SEO Optimized</li>
+                                <li><i class="fas fa-check"></i> Fast Loading</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$599</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="web-development">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="digital-marketing">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Digital Marketing</h3>
+                            <p class="service-description">
+                                Strategic digital marketing campaigns that increase brand visibility 
+                                and drive qualified leads to your business.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Social Media Marketing</li>
+                                <li><i class="fas fa-check"></i> Google Ads</li>
+                                <li><i class="fas fa-check"></i> Content Strategy</li>
+                                <li><i class="fas fa-check"></i> Analytics & Reporting</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$799</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="digital-marketing">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Strategy -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="brand-strategy">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Brand Strategy</h3>
+                            <p class="service-description">
+                                Comprehensive brand development that creates a strong, memorable 
+                                identity and connects with your target audience.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Brand Identity</li>
+                                <li><i class="fas fa-check"></i> Logo Design</li>
+                                <li><i class="fas fa-check"></i> Brand Guidelines</li>
+                                <li><i class="fas fa-check"></i> Market Research</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$1299</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="brand-strategy">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Solutions -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="ecommerce">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">E-commerce Solutions</h3>
+                            <p class="service-description">
+                                Complete e-commerce platforms that drive sales with secure payment 
+                                processing and intuitive user experiences.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Custom Store Design</li>
+                                <li><i class="fas fa-check"></i> Payment Integration</li>
+                                <li><i class="fas fa-check"></i> Inventory Management</li>
+                                <li><i class="fas fa-check"></i> Mobile Optimized</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$1599</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="ecommerce">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="ui-ux">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">UI/UX Design</h3>
+                            <p class="service-description">
+                                User-centered design solutions that create engaging experiences 
+                                and drive conversions through intuitive interfaces.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> User Research</li>
+                                <li><i class="fas fa-check"></i> Wireframing</li>
+                                <li><i class="fas fa-check"></i> Prototyping</li>
+                                <li><i class="fas fa-check"></i> Usability Testing</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$499</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="ui-ux">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Services -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="seo">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">SEO Services</h3>
+                            <p class="service-description">
+                                Advanced SEO strategies that improve search rankings and drive 
+                                organic traffic to boost your online visibility.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Keyword Research</li>
+                                <li><i class="fas fa-check"></i> On-Page SEO</li>
+                                <li><i class="fas fa-check"></i> Link Building</li>
+                                <li><i class="fas fa-check"></i> Performance Tracking</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$499</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="seo">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate-on-scroll" data-service="mobile-app">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Mobile App Development</h3>
+                            <p class="service-description">
+                                Native iOS/Android and cross‑platform apps built for performance and scale.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Native & cross‑platform</li>
+                                <li><i class="fas fa-check"></i> App Store & Play Store launch</li>
+                                <li><i class="fas fa-check"></i> Secure architecture</li>
+                                <li><i class="fas fa-check"></i> Analytics & push notifications</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-from">Starting from</span>
+                                <span class="price-amount">$999</span>
+                            </div>
+                        </div>
+                        <div class="service-overlay">
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service="mobile-app">
+                                <i class="fas fa-arrow-right"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <div class="section-header animate-on-scroll">
+                        <span class="section-badge">Our Process</span>
+                        <h2 class="section-title">How We Work</h2>
+                        <p class="section-description">
+                            Our proven methodology ensures successful project delivery 
+                            from concept to completion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4 class="step-title">Discovery</h4>
+                        <p class="step-description">
+                            We analyze your business goals, target audience, and market 
+                            to create a strategic foundation.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="step-title">Strategy</h4>
+                        <p class="step-description">
+                            We develop a comprehensive strategy tailored to your specific 
+                            needs and objectives.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4 class="step-title">Execution</h4>
+                        <p class="step-description">
+                            Our expert team brings the strategy to life with precision 
+                            and attention to detail.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="step-title">Launch</h4>
+                        <p class="step-description">
+                            We launch your project and provide ongoing support to ensure 
+                            continued success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="cta-content animate-on-scroll">
+                        <h2 class="cta-title mb-4">Ready to Transform Your Business?</h2>
+                        <p class="cta-description mb-5">
+                            Let's discuss your project and create something amazing together. 
+                            Get in touch with our team today.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="enquiry.html" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-envelope"></i> Start Your Project
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-phone"></i> Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modal -->
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent">
+                        <!-- Content will be dynamically loaded -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="enquiry.html" class="btn btn-primary">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-brand">
+                        <h5 class="brand-name">Swift Agency</h5>
+                        <p class="brand-description">
+                            Transforming businesses through innovative digital solutions 
+                            and strategic marketing expertise.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Digital Marketing</a></li>
+                        <li><a href="services.html">Brand Strategy</a></li>
+                        <li><a href="services.html">E-commerce</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Work With Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h6 class="footer-title">Get In Touch</h6>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> swftagency@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +234-916-281-0211</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Swftagency" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/swftagency/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">
+                        &copy; 2024 Swift Agency. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+    
+    <!-- WhatsApp Redirect Icon -->
+    <div id="whatsapp-icon" class="whatsapp-icon">
+        <a href="https://wa.me/2349162810211?text=Hello%20Swift%20Agency!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+</body>
+</html>

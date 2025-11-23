@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Swift Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enquiry.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <ul>
+            <div class="logo">
+                <li><a href="index.html">SWIFT AGENCY</a></li>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About US</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html">work with us</a></li>
+            </div> 
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="enquiry-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </h1>
+                    <p class="lead text-white mb-4">
+                        Have a question or want to discuss your project? We're here to help! 
+                        Send us your enquiry and we'll get back to you within 24 hours.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>24hr Response</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span>500+ Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <span>5-Star Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <i class="fas fa-comments hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon"><a href="https://maps.app.goo.gl/UoLdw22iM11WcoeZ8">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Our Office</h5>
+                        <p>FUNAAB</p></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card"><a href="tel:+2349162810211">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Call Us</h5></a>
+                        <p>+234-916-281-0211<br>Mon-Fri 9AM-6PM EST</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p>swftagency@gmail.com<br>anushow299@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5>Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/Swftagency" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/swftagency/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section class="enquiry-form py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-container">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold">Send Us Your Enquiry</h2>
+                            <p class="text-muted">Fill out the form below and we'll get back to you as soon as possible</p>
+                        </div>
+                        
+                        <form id="enquiryForm" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your last name.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="company" class="form-label">Company/Organization</label>
+                                    <input type="text" class="form-control" id="company" name="company">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="budget" class="form-label">Project Budget</label>
+                                    <select class="form-select" id="budget" name="budget">
+                                        <option value="">Select Budget Range</option>
+                                        <option value="under-5k">Under $5,000</option>
+                                        <option value="5k-10k">$5,000 - $10,000</option>
+                                        <option value="10k-25k">$10,000 - $25,000</option>
+                                        <option value="25k-50k">$25,000 - $50,000</option>
+                                        <option value="over-50k">Over $50,000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="serviceType" class="form-label">Service Interest *</label>
+                                <select class="form-select" id="serviceType" name="serviceType" required>
+                                    <option value="">Select Service Type</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="brand-strategy">Brand Strategy</option>
+                                    <option value="social-media">Social Media Management</option>
+                                    <option value="content-creation">Content Creation</option>
+                                    <option value="analytics">Business Analytics</option>
+                                    <option value="consultation">General Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a service type.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="timeline" class="form-label">Project Timeline</label>
+                                <select class="form-select" id="timeline" name="timeline">
+                                    <option value="">Select Timeline</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-month">Within 1 Month</option>
+                                    <option value="2-3-months">2-3 Months</option>
+                                    <option value="3-6-months">3-6 Months</option>
+                                    <option value="6-months-plus">6+ Months</option>
+                                    <option value="just-exploring">Just Exploring</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Project Details *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" 
+                                    placeholder="Please describe your project, goals, and any specific requirements..." required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide project details.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for updates and tips
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Send Enquiry
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Choose Swift Agency?</h2>
+                <p class="text-muted">We're committed to delivering exceptional results for every client</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h5>Fast Delivery</h5>
+                        <p>We deliver projects on time without compromising quality. Our agile approach ensures rapid results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h5>Expert Team</h5>
+                        <p>Our team consists of industry experts with proven track records in their respective fields.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5>24/7 Support</h5>
+                        <p>We provide round-the-clock support to ensure your business never stops growing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Swift Agency. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Built with <i class="fas fa-heart text-danger"></i> by Swift Agency</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/enquiry.js"></script>
+    
+    <!-- WhatsApp Redirect Icon -->
+    <div id="whatsapp-icon" class="whatsapp-icon">
+        <a href="https://wa.me/2349162810211?text=Hello%20Swift%20Agency!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+</body>
+</html>

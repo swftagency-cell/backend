@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    <title>Contact Us - Swift Agency</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <div class="logo">
+                <li><a href="index.html">SWIFT AGENCY</a></li>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About US</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="booking.html">work with us</a></li>
+            </div> 
+        </ul>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h1 class="animate-on-scroll fade-in-up">Get In Touch</h1>
+                <p class="animate-on-scroll fade-in-up animate-delay-1">Ready to transform your digital presence? Let's discuss your project and bring your vision to life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="contact-info-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="contact-info-card animate-on-scroll fade-in-up">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Phone</h5>
+                        <p>+234-916-281-0211</p>
+                        <a href="tel:+2349162810211" class="contact-link">Call Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="contact-info-card animate-on-scroll fade-in-up animate-delay-1">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email</h5>
+                        <p>swftagency@gmail.com</p>
+                        <a href="mailto:swftagency@gmail.com" class="contact-link">Send Email</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="contact-info-card animate-on-scroll fade-in-up animate-delay-2">
+                        <div class="contact-card-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h5>WhatsApp</h5>
+                        <p>@swiftagency</p>
+                        <a href="https://wa.link/seaws4" class="contact-link" target="_blank">Message Us</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="contact-info-card animate-on-scroll fade-in-up animate-delay-3">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Location</h5>
+                        <p>FUNAAB</p>
+                        <a href="https://maps.app.goo.gl/Vszqz6H3EiWtKQpr5" target="_blank" class="contact-link">View Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-wrapper animate-on-scroll fade-in-up">
+                        <div class="section-header text-center mb-5">
+                            <h2>Send Us a Message</h2>
+                            <p>Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" class="form-control" id="company" name="company">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="web-design">Web Design</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="seo">SEO Services</option>
+                                    <option value="app-development">App Development</option>
+                                    <option value="support">Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required placeholder="Tell us about your project or inquiry..."></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media-section py-5">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="animate-on-scroll fade-in-up">Follow Us</h3>
+                <p class="animate-on-scroll fade-in-up animate-delay-1">Stay connected with us on social media for updates and insights</p>
+                <div class="social-links animate-on-scroll fade-in-up animate-delay-2">
+                    <a href="https://www.instagram.com/swftagency" class="social-link instagram-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>@fronttobackdevelopment</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@swftagency" class="social-link tiktok-link" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <span>@swiftagency</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/swift-agency" class="social-link linkedin-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>Swift Agency</span>
+                    </a>
+                    <a href="https://twitter.com/swftagency" class="social-link twitter-link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <span>@swiftagency</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h3 class="animate-on-scroll fade-in-up">Frequently Asked Questions</h3>
+                        <p class="animate-on-scroll fade-in-up animate-delay-1">Quick answers to common questions</p>
+                    </div>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item animate-on-scroll fade-in-up">
+                            <div class="faq-question">
+                                <h5>How long does it take to complete a project?</h5>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Project timelines vary depending on complexity and scope. Typically, websites take 2-6 weeks, while larger applications may take 2-4 months. We'll provide a detailed timeline during our initial consultation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll fade-in-up animate-delay-1">
+                            <div class="faq-question">
+                                <h5>Do you provide ongoing support after project completion?</h5>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We offer various support packages including maintenance, updates, and technical support. We believe in long-term partnerships with our clients.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll fade-in-up animate-delay-2">
+                            <div class="faq-question">
+                                <h5>What is your pricing structure?</h5>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our pricing is project-based and depends on your specific requirements. We offer competitive rates and transparent pricing with no hidden fees. Contact us for a personalized quote.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll fade-in-up animate-delay-3">
+                            <div class="faq-question">
+                                <h5>Can you work with existing websites or applications?</h5>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! We can enhance, redesign, or add new features to existing websites and applications. We work with various technologies and platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SWIFT AGENCY</h3>
+                <p>Transforming ideas into stunning digital experiences. We help businesses thrive in the digital world through innovative web solutions.</p>
+                <div class="newsletter">
+                    <h4>Subscribe to our Newsletter</h4>
+                    <form class="newsletter-form animate-on-scroll fade-in-up animate-delay-1" id="newsletter-form">
+                        <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Email Address" required>
+                        <button type="submit" class="newsletter-btn" id="newsletter-submit">Join Now</button>
+                    </form>
+                    <div id="newsletter-message" style="margin-top: 10px; font-size: 14px;"></div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <div class="contact-info">
+                    <div class="contact-item"><a href="tel:+2349162810211">
+                        <i class="fas fa-phone"></i>
+                        <span class="contact-label">Phone:</span></a>
+                        <span class="contact-value">+234-916-281-0211</span>
+                    </div>
+                    <div class="contact-item"><a href="mailto:swftagency@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <span class="contact-label">Email:</span></a>
+                        <span class="contact-value">swftagency@gmail.com</span>
+                    </div>
+                    <div class="contact-item"><a href="https://wa.link/n4oou3" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="contact-label">WhatsApp:</span></a>
+                        <span class="contact-value">wa.me/@swftagency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form functionality (aligned with enquiry page behavior)
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+
+            // Minimal notification utility (consistent UX with enquiry)
+            function showNotification(message, type = 'info') {
+                const existing = document.querySelectorAll('.notification');
+                existing.forEach(n => n.remove());
+                const n = document.createElement('div');
+                n.className = `notification alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show`;
+                n.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 9999; min-width: 300px; max-width: 500px;';
+                n.innerHTML = `
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                document.body.appendChild(n);
+                setTimeout(() => { if (n.parentNode) n.remove(); }, 5000);
+            }
+
+            function validateForm(form) {
+                const required = form.querySelectorAll('[required]');
+                let ok = true;
+                required.forEach(field => {
+                    const value = (field.value || '').trim();
+                    if (!value) ok = false;
+                    if (field.name === 'email' && value) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(value)) ok = false;
+                    }
+                    if (field.name === 'message' && value.length < 10) ok = false;
+                });
+                return ok;
+            }
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Validate
+                    if (!validateForm(this)) {
+                        showNotification('Please fill in all required fields correctly.', 'error');
+                        return;
+                    }
+
+                    // Get form data
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+
+                    try {
+                        // Use absolute API URL to avoid static server proxy/CORS issues
+                        const response = await fetch('http://localhost:3000/api/contact', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                name: data.name,
+                                email: data.email,
+                                phone: data.phone,
+                                company: data.company,
+                                subject: data.subject,
+                                message: data.message
+                            })
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok && result.success) {
+                            showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                            this.reset();
+                        } else {
+                            throw new Error(result.error || 'Failed to send message. Please try again.');
+                        }
+                    } catch (error) {
+                        console.error('Contact form error:', error);
+                        showNotification('Network or server error. Please try again in a moment.', 'error');
+                    } finally {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+
+            // Newsletter subscription functionality (aligned with index.html)
+            const newsletterForm = document.getElementById('newsletter-form');
+            const newsletterEmail = document.getElementById('newsletter-email');
+            const newsletterSubmit = document.getElementById('newsletter-submit');
+            const newsletterMessage = document.getElementById('newsletter-message');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const email = (newsletterEmail.value || '').trim();
+                    
+                    // Email validation (same regex as index.html)
+                    if (!isValidEmail(email)) {
+                        showNewsletterMessage('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const originalText = newsletterSubmit.textContent;
+                    newsletterSubmit.textContent = 'Subscribing...';
+                    newsletterSubmit.disabled = true;
+                    
+                    try {
+                         const response = await fetch('http://localhost:3000/api/newsletter/subscribe', {
+                             method: 'POST',
+                             headers: {
+                                 'Content-Type': 'application/json',
+                             },
+                             body: JSON.stringify({ email })
+                         });
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok && (result?.success ?? true)) {
+                            showNewsletterMessage('Thank you for subscribing! Check your email for confirmation.', 'success');
+                            newsletterEmail.value = '';
+                        } else {
+                            const message = result?.error || result?.message || 'Subscription failed. Please try again.';
+                            showNewsletterMessage(message, 'error');
+                        }
+                    } catch (error) {
+                        console.error('Newsletter subscription error:', error);
+                        showNewsletterMessage('Network error. Please check your connection and try again.', 'error');
+                    } finally {
+                        newsletterSubmit.textContent = originalText;
+                        newsletterSubmit.disabled = false;
+                    }
+                });
+            }
+            
+            function showNewsletterMessage(message, type) {
+                newsletterMessage.textContent = message;
+                newsletterMessage.style.color = type === 'success' ? '#28a745' : '#dc3545';
+                newsletterMessage.style.display = 'block';
+                
+                // Hide message after 5 seconds for consistent UX
+                setTimeout(() => {
+                    newsletterMessage.style.display = 'none';
+                }, 5000);
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- WhatsApp Redirect Icon -->
+    <div id="whatsapp-icon" class="whatsapp-icon">
+        <a href="https://wa.me/2349162810211?text=Hello%20Swift%20Agency!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+</body>
+</html>

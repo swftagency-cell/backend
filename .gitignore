@@ -1,0 +1,29 @@
+# Node / Backend
+node_modules/
+backend/node_modules/
+backend/.env
+backend/.cache/
+backend/.wwebjs_auth/
+backend/database/swift_agency.db
+backend/**/*.log
+
+# Frontend
+frontend/node_modules/
+frontend/.cache/
+frontend/dist/
+frontend/**/*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.tmp
+.vscode/
+.idea/
+
+# Tests and coverage
+coverage/
+*.lcov
+
+# Build artifacts
+build/
+out/

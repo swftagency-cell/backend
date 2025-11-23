@@ -1,0 +1,27 @@
+{
+  "name": "swift-agency",
+  "version": "1.0.0",
+  "description": "Swift Agency website with separated backend and frontend",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "build": "echo 'No build step required'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "echo 'Build completed'",
+    "install-backend": "cd backend && npm install",
+    "install-all": "npm run install-backend"
+  },
+  "keywords": [
+    "swift-agency",
+    "appointment-booking",
+    "chatbot",
+    "express",
+    "nodejs"
+  ],
+  "author": "Swift Agency",
+  "license": "MIT",
+  "workspaces": [
+    "backend"
+  ]
+}

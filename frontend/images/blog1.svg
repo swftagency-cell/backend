@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+  <defs>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buttonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#001E3D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#screenGrad)" opacity="0.1"/>
+  
+  <!-- Computer Screen -->
+  <rect x="80" y="60" width="240" height="150" rx="8" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+  <rect x="90" y="70" width="220" height="130" rx="4" fill="url(#screenGrad)"/>
+  
+  <!-- Website Elements -->
+  <!-- Header -->
+  <rect x="100" y="80" width="200" height="15" rx="2" fill="#e9ecef"/>
+  <rect x="100" y="80" width="60" height="15" rx="2" fill="#0066CC"/>
+  
+  <!-- Navigation -->
+  <rect x="100" y="105" width="40" height="8" rx="1" fill="#6c757d"/>
+  <rect x="150" y="105" width="35" height="8" rx="1" fill="#6c757d"/>
+  <rect x="195" y="105" width="30" height="8" rx="1" fill="#6c757d"/>
+  <rect x="235" y="105" width="35" height="8" rx="1" fill="#6c757d"/>
+  
+  <!-- Content Area -->
+  <rect x="100" y="125" width="200" height="4" rx="1" fill="#adb5bd"/>
+  <rect x="100" y="135" width="180" height="4" rx="1" fill="#adb5bd"/>
+  <rect x="100" y="145" width="160" height="4" rx="1" fill="#adb5bd"/>
+  
+  <!-- Button -->
+  <rect x="100" y="160" width="60" height="20" rx="10" fill="url(#buttonGrad)"/>
+  
+  <!-- User Icons -->
+  <circle cx="130" cy="40" r="12" fill="#ffffff" opacity="0.9"/>
+  <path d="M130 35 L125 40 L130 45 L135 40 Z" fill="#0066CC"/>
+  
+  <circle cx="270" cy="40" r="12" fill="#ffffff" opacity="0.9"/>
+  <path d="M270 35 L265 40 L270 45 L275 40 Z" fill="#28a745"/>
+  
+  <!-- Cursor -->
+  <polygon points="250,120 250,135 255,130" fill="#ffffff" stroke="#333" stroke-width="1"/>
+  
+  <!-- Floating Elements -->
+  <circle cx="50" cy="100" r="8" fill="#ffffff" opacity="0.3"/>
+  <circle cx="350" cy="80" r="6" fill="#ffffff" opacity="0.2"/>
+  <circle cx="60" cy="180" r="5" fill="#ffffff" opacity="0.25"/>
+  <circle cx="340" cy="170" r="7" fill="#ffffff" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="200" y="230" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">User-Friendly Design</text>
+</svg>

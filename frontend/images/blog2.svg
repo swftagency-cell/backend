@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+  <defs>
+    <linearGradient id="searchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#28a745;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#20c997;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#searchGrad)" opacity="0.1"/>
+  
+  <!-- Search Engine Interface -->
+  <rect x="60" y="50" width="280" height="160" rx="12" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
+  
+  <!-- Search Bar -->
+  <rect x="80" y="70" width="240" height="35" rx="18" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <circle cx="300" cy="87.5" r="12" fill="#0066CC"/>
+  <path d="M295 83 L305 93 M305 83 L295 93" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Search Results -->
+  <rect x="80" y="120" width="240" height="15" rx="2" fill="#0066CC"/>
+  <rect x="80" y="140" width="200" height="8" rx="1" fill="#6c757d"/>
+  <rect x="80" y="152" width="180" height="8" rx="1" fill="#6c757d"/>
+  
+  <rect x="80" y="170" width="220" height="12" rx="2" fill="#28a745"/>
+  <rect x="80" y="185" width="160" height="6" rx="1" fill="#6c757d"/>
+  
+  <!-- SEO Chart -->
+  <rect x="250" y="130" width="80" height="60" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Chart Bars -->
+  <rect x="260" y="160" width="8" height="20" fill="url(#chartGrad)"/>
+  <rect x="275" y="150" width="8" height="30" fill="url(#chartGrad)"/>
+  <rect x="290" y="140" width="8" height="40" fill="url(#chartGrad)"/>
+  <rect x="305" y="135" width="8" height="45" fill="url(#chartGrad)"/>
+  
+  <!-- Trending Arrow -->
+  <path d="M315 140 L325 130 L320 135 L325 130 L320 125" stroke="#28a745" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Keywords floating around -->
+  <ellipse cx="40" cy="90" rx="25" ry="12" fill="#ffffff" opacity="0.8"/>
+  <text x="40" y="95" text-anchor="middle" fill="#0066CC" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SEO</text>
+  
+  <ellipse cx="360" cy="120" rx="30" ry="12" fill="#ffffff" opacity="0.8"/>
+  <text x="360" y="125" text-anchor="middle" fill="#28a745" font-family="Arial, sans-serif" font-size="9" font-weight="bold">RANKING</text>
+  
+  <ellipse cx="50" cy="180" rx="35" ry="12" fill="#ffffff" opacity="0.8"/>
+  <text x="50" y="185" text-anchor="middle" fill="#6f42c1" font-family="Arial, sans-serif" font-size="8" font-weight="bold">KEYWORDS</text>
+  
+  <!-- Magnifying Glass Icon -->
+  <circle cx="200" cy="87.5" r="8" fill="none" stroke="#6c757d" stroke-width="2"/>
+  <path d="M206 94 L212 100" stroke="#6c757d" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Title -->
+  <text x="200" y="230" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SEO Optimization</text>
+</svg>

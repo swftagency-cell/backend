@@ -1,0 +1,221 @@
+/* Enhanced Animations and Micro-interactions for .more Section */
+
+/* Additional Keyframes */
+@keyframes shimmerEffect {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+    }
+}
+
+@keyframes pulseScale {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Enhanced Micro-interactions */
+.more .lef,
+.more .rit {
+    animation-delay: 0.2s;
+}
+
+.more .lef {
+    animation-delay: 0.2s;
+}
+
+.more .rit {
+    animation-delay: 0.4s;
+}
+
+/* Search Container Enhanced Animations */
+.search-container {
+    position: relative;
+}
+
+.search-container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.3), 
+        rgba(147, 197, 253, 0.2), 
+        rgba(59, 130, 246, 0.3));
+    background-size: 400% 400%;
+    border-radius: 32px;
+    opacity: 0;
+    z-index: -1;
+    animation: shimmerEffect 3s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+.search-container:focus-within::after {
+    opacity: 1;
+}
+
+.search-container input:focus {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Service Cards Enhanced Animations */
+.text .one:hover,
+.text .two:hover,
+.text .three:hover {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Card Content Stagger Animation */
+.text .one h2,
+.text .two h2,
+.text .three h2 {
+    animation-delay: 0.2s;
+}
+
+.text .one p,
+.text .two p,
+.text .three p {
+    animation-delay: 0.4s;
+}
+
+.text .one span,
+.text .two span,
+.text .three span {
+    animation-delay: 0.6s;
+    position: relative;
+    overflow: hidden;
+}
+
+.text .one span::before,
+.text .two span::before,
+.text .three span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.text .one:hover span::before,
+.text .two:hover span::before,
+.text .three:hover span::before {
+    left: 100%;
+}
+
+/* Icon Pulse Animation */
+.text .one:hover span i,
+.text .two:hover span i,
+.text .three:hover span i {
+    animation: pulseScale 1.5s ease-in-out infinite;
+}
+
+/* Background Animation Enhancement */
+.more::after {
+    animation-duration: 20s;
+}
+
+/* Scroll-triggered animations */
+@media (prefers-reduced-motion: no-preference) {
+    .more {
+        opacity: 0;
+        animation: fadeInUp 1.5s ease-out 0.5s forwards;
+    }
+    
+    .search-container input {
+        transform: translateY(20px);
+        opacity: 0;
+        animation: fadeInUp 1s ease-out 1.2s forwards;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .more::after {
+        animation: none;
+    }
+    
+    .text .one:hover,
+    .text .two:hover,
+    .text .three:hover {
+        animation: none;
+    }
+    
+    .search-container::after {
+        animation: none;
+    }
+    
+    .search-container input:focus {
+        animation: none;
+    }
+}
+
+/* Mobile-specific animation adjustments */
+@media (max-width: 768px) {
+    .search-container::after {
+        border-radius: 25px;
+    }
+    
+    .text .one:hover,
+    .text .two:hover,
+    .text .three:hover {
+        animation-duration: 2s;
+    }
+}
+
+/* Performance optimizations */
+.more,
+.search-container,
+.text .one,
+.text .two,
+.text .three {
+    will-change: transform, opacity;
+}
+
+.more::after,
+.search-container::after,
+.text .one span::before,
+.text .two span::before,
+.text .three span::before {
+    will-change: transform, opacity, left;
+}
