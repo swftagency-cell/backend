@@ -1,0 +1,13 @@
+node_modules/
+.env
+.cache/
+.wwebjs_auth/
+.wwebjs_cache/
+coverage/
+*.log
+dist/
+build/
+.vscode/
+.idea/
+**/*.tmp
+database/swift_agency.db
