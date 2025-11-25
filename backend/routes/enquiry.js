@@ -96,7 +96,7 @@ async function sendEnquiryEmail(enquiryData) {
     `;
 
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'anushow299@gmail.com',
+      from: process.env.EMAIL_USER,
       to: ADMIN_EMAIL,
       cc: email,
       subject: emailSubject,

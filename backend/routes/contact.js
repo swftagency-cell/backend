@@ -87,7 +87,7 @@ async function sendContactEmail(contactData) {
     `;
 
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'swftagency@gmail.com',
+      from: process.env.EMAIL_USER,
       to: ADMIN_EMAIL,
       subject: emailSubject,
       html: emailBody,
@@ -99,9 +99,10 @@ async function sendContactEmail(contactData) {
       new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000))
     ]);
     console.log('Contact email sent successfully');
+    return true;
   } catch (error) {
     console.error('Error sending contact email:', error);
-    throw error;
+    return false;
   }
 }
 
@@ -147,18 +148,24 @@ router.post('/', async (req, res) => {
       createdAt
     ]);
 
-    // Send email notification
+    let emailSent = false;
+    let emailErrorMessage = null;
     try {
-      await sendContactEmail({ name, email, phone, company, subject, message });
+      emailSent = await sendContactEmail({ name, email, phone, company, subject, message });
     } catch (emailError) {
       console.error('Failed to send contact email:', emailError);
-      // Continue even if email fails
+      emailErrorMessage = emailError.message || 'Unknown email error';
+    }
+    if (!emailSent && !emailErrorMessage) {
+      emailErrorMessage = 'Email not sent. Verify EMAIL_HOST/PORT/SECURE and EMAIL_USER/EMAIL_PASS.';
     }
 
     res.status(201).json({
       success: true,
       message: 'Contact message sent successfully! We will get back to you within 24 hours.',
-      contactId: contactId
+      contactId: contactId,
+      email_sent: emailSent,
+      email_error: emailErrorMessage
     });
 
   } catch (error) {
