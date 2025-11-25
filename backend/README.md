@@ -43,6 +43,12 @@ The backend reads `ALLOWED_ORIGINS` and strictly matches origins. Update this wh
 4. Deploy — Railway will build and start using `npm run start`
 5. Optional: Add a custom domain (e.g., `api.yourdomain.com`) and configure DNS
 
+### Production Backend URL
+
+- Public endpoint: `https://backend-y4oa.onrender.com`
+- Use this base URL for production API calls: `https://backend-y4oa.onrender.com/api/...`
+- Ensure it is included in `ALLOWED_ORIGINS` and documented in client apps.
+
 ### Storage & Database
 
 - SQLite: configure a Railway Volume and set `DB_PATH` to the mounted path
@@ -59,6 +65,11 @@ npm ci
 npm run dev
 curl http://localhost:3000/api/health
 ```
+
+## Monitoring
+
+- Enable Railway metrics and logs for uptime and performance
+- Optionally configure external uptime monitors (e.g., UptimeRobot) to probe `GET /api/health`
 
 ## Security
 

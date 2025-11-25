@@ -12,9 +12,14 @@ const transporter = nodemailer.createTransport({
   port: parseInt(process.env.EMAIL_PORT || '587', 10),
   secure: (process.env.EMAIL_SECURE || 'false') === 'true',
   auth: {
-    user: process.env.EMAIL_USER || 'swftagency@gmail.com',
-    pass: process.env.EMAIL_PASS || 'hkolxemwgnjvluok'
-  }
+    user: process.env.EMAIL_USER || '',
+    pass: process.env.EMAIL_PASS || ''
+  },
+  pool: true,
+  maxConnections: 3,
+  maxMessages: 20,
+  connectionTimeout: 10000,
+  socketTimeout: 10000
 });
 
 // Send contact email notification
@@ -89,7 +94,10 @@ async function sendContactEmail(contactData) {
       replyTo: email
     };
 
-    await transporter.sendMail(mailOptions);
+    await Promise.race([
+      transporter.sendMail(mailOptions),
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000))
+    ]);
     console.log('Contact email sent successfully');
   } catch (error) {
     console.error('Error sending contact email:', error);

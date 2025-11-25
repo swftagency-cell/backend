@@ -43,10 +43,25 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // CORS configuration
+const defaultProdOrigins = [
+  'https://your-vercel-domain.vercel.app',
+  'https://swftagency.com',
+  'https://www.swftagency.com',
+  'https://backend-y4oa.onrender.com'
+];
+const defaultDevOrigins = [
+  'http://localhost:5173', 'http://127.0.0.1:5173',
+  'http://localhost:8000', 'http://127.0.0.1:8000',
+  'http://localhost:3000', 'http://127.0.0.1:3000'
+];
+const envOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',').map(s => s.trim()).filter(Boolean) : null;
+const allowedOrigins = envOrigins || (process.env.NODE_ENV === 'production' ? defaultProdOrigins : defaultDevOrigins);
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-vercel-domain.vercel.app', 'https://swftagency.com', 'https://www.swftagency.com']
-    : ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:8000', 'http://127.0.0.1:8000', 'http://localhost:3000', 'http://127.0.0.1:3000'],
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error('Not allowed by CORS'));
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
