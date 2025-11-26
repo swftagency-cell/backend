@@ -104,11 +104,14 @@ async function sendEnquiryEmail(enquiryData) {
       replyTo: email
     };
 
-    await Promise.race([
-      transporter.sendMail(mailOptions),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000))
-    ]);
-    console.log('✅ Enquiry email sent successfully');
+    const sendPromise = transporter.sendMail(mailOptions);
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000));
+    const info = await Promise.race([sendPromise, timeoutPromise]);
+    if (info && info.messageId) {
+      console.log('✅ Enquiry email sent successfully', { messageId: info.messageId, response: info.response });
+    } else {
+      console.log('✅ Enquiry email send completed');
+    }
     return true;
   } catch (error) {
     console.error('❌ Error sending enquiry email:', error);

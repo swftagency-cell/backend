@@ -94,11 +94,14 @@ async function sendContactEmail(contactData) {
       replyTo: email
     };
 
-    await Promise.race([
-      transporter.sendMail(mailOptions),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000))
-    ]);
-    console.log('Contact email sent successfully');
+    const sendPromise = transporter.sendMail(mailOptions);
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000));
+    const info = await Promise.race([sendPromise, timeoutPromise]);
+    if (info && info.messageId) {
+      console.log('Contact email sent successfully', { messageId: info.messageId, response: info.response });
+    } else {
+      console.log('Contact email send completed');
+    }
     return true;
   } catch (error) {
     console.error('Error sending contact email:', error);
@@ -270,3 +273,19 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
+router.get('/status', async (req, res) => {
+  try {
+    const ok = await transporter.verify();
+    res.json({ smtp_ok: !!ok, host: process.env.EMAIL_HOST, port: parseInt(process.env.EMAIL_PORT || '587', 10), secure: (process.env.EMAIL_SECURE || 'false') === 'true', from: process.env.EMAIL_USER, to: ADMIN_EMAIL });
+  } catch (e) {
+    res.status(500).json({ smtp_ok: false, error: e?.message || 'verify failed' });
+  }
+});
+router.post('/test', async (req, res) => {
+  try {
+    const ok = await sendContactEmail({ name: 'Test', email: process.env.EMAIL_USER || 'test@example.com', phone: '', company: '', subject: 'SMTP Test', message: 'This is a test email from Swift Agency.' });
+    res.json({ success: ok });
+  } catch (e) {
+    res.status(500).json({ success: false, error: e?.message || 'send failed' });
+  }
+});
