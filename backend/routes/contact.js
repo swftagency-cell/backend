@@ -274,12 +274,19 @@ router.delete('/:id', async (req, res) => {
 
 module.exports = router;
 router.get('/status', async (req, res) => {
+  const host = process.env.EMAIL_HOST || 'smtp.gmail.com';
+  const port = parseInt(process.env.EMAIL_PORT || '587', 10);
+  const secure = (process.env.EMAIL_SECURE || 'false') === 'true';
+  const from = process.env.EMAIL_USER || '';
+  const to = ADMIN_EMAIL || '';
+  let error = null;
+  let ok = false;
   try {
-    const ok = await transporter.verify();
-    res.json({ smtp_ok: !!ok, host: process.env.EMAIL_HOST, port: parseInt(process.env.EMAIL_PORT || '587', 10), secure: (process.env.EMAIL_SECURE || 'false') === 'true', from: process.env.EMAIL_USER, to: ADMIN_EMAIL });
+    ok = !!(await transporter.verify());
   } catch (e) {
-    res.status(500).json({ smtp_ok: false, error: e?.message || 'verify failed' });
+    error = { message: e?.message || 'verify failed', code: e?.code };
   }
+  res.json({ smtp_ok: ok, host, port, secure, from, to, error });
 });
 router.post('/test', async (req, res) => {
   try {
