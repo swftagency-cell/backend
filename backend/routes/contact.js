@@ -289,3 +289,11 @@ router.post('/test', async (req, res) => {
     res.status(500).json({ success: false, error: e?.message || 'send failed' });
   }
 });
+router.get('/test', async (req, res) => {
+  try {
+    const ok = await sendContactEmail({ name: 'Test', email: process.env.EMAIL_USER || 'test@example.com', phone: '', company: '', subject: 'SMTP Test', message: 'This is a test email from Swift Agency.' });
+    res.json({ success: ok });
+  } catch (e) {
+    res.status(500).json({ success: false, error: e?.message || 'send failed' });
+  }
+});

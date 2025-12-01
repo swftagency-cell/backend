@@ -44,6 +44,12 @@ router.get('/', (req, res) => {
         methods: ['POST'],
         description: 'DeepSeek AI chat completions (replace for Google AI)'
       },
+      contact_diagnostics: {
+        base_url: '/api/contact',
+        methods: ['GET', 'POST'],
+        sub_endpoints: ['/status', '/test'],
+        description: 'SMTP diagnostics and test email'
+      },
       health: {
         base_url: '/api/health',
         methods: ['GET'],
