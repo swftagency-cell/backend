@@ -106,11 +106,48 @@ async function sendEnquiryEmail(enquiryData) {
 
     const sendPromise = transporter.sendMail(mailOptions);
     const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000));
-    const info = await Promise.race([sendPromise, timeoutPromise]);
-    if (info && info.messageId) {
-      console.log('✅ Enquiry email sent successfully', { messageId: info.messageId, response: info.response });
-    } else {
-      console.log('✅ Enquiry email send completed');
+    let info;
+    try {
+      info = await Promise.race([sendPromise, timeoutPromise]);
+      if (info && info.messageId) {
+        console.log('✅ Enquiry email sent successfully', { messageId: info.messageId, response: info.response });
+      } else {
+        console.log('✅ Enquiry email send completed');
+      }
+    } catch (smtpErr) {
+      const useResend = (process.env.EMAIL_PROVIDER || '').toLowerCase() === 'resend' || !!process.env.RESEND_API_KEY;
+      if (useResend) {
+        try {
+          const apiKey = process.env.RESEND_API_KEY;
+          const resendResp = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${apiKey}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              from: process.env.EMAIL_USER,
+              to: ADMIN_EMAIL,
+              subject: emailSubject,
+              html: emailBody,
+              reply_to: email
+            })
+          });
+          const text = await resendResp.text();
+          if (!resendResp.ok) {
+            console.error('Resend API error', { status: resendResp.status, body: text });
+            throw new Error(`Resend failed: ${resendResp.status}`);
+          }
+          let parsed = {};
+          try { parsed = JSON.parse(text); } catch (_) {}
+          console.log('✅ Enquiry email sent via Resend', { id: parsed?.id });
+        } catch (resendErr) {
+          console.error('❌ Fallback send via Resend failed', resendErr);
+          throw resendErr;
+        }
+      } else {
+        throw smtpErr;
+      }
     }
     return true;
   } catch (error) {

@@ -96,13 +96,48 @@ async function sendContactEmail(contactData) {
 
     const sendPromise = transporter.sendMail(mailOptions);
     const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000));
-    const info = await Promise.race([sendPromise, timeoutPromise]);
-    if (info && info.messageId) {
-      console.log('Contact email sent successfully', { messageId: info.messageId, response: info.response });
-    } else {
+    let info;
+    try {
+      info = await Promise.race([sendPromise, timeoutPromise]);
+      if (info && info.messageId) {
+        console.log('Contact email sent successfully', { messageId: info.messageId, response: info.response });
+        return true;
+      }
       console.log('Contact email send completed');
+      return true;
+    } catch (smtpErr) {
+      const useResend = (process.env.EMAIL_PROVIDER || '').toLowerCase() === 'resend' || !!process.env.RESEND_API_KEY;
+      if (!useResend) throw smtpErr;
+      try {
+        const apiKey = process.env.RESEND_API_KEY;
+        const resendResp = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: process.env.EMAIL_USER,
+            to: ADMIN_EMAIL,
+            subject: emailSubject,
+            html: emailBody,
+            reply_to: email
+          })
+        });
+        const text = await resendResp.text();
+        if (!resendResp.ok) {
+          console.error('Resend API error', { status: resendResp.status, body: text });
+          return false;
+        }
+        let parsed = {};
+        try { parsed = JSON.parse(text); } catch (_) {}
+        console.log('Contact email sent via Resend', { id: parsed?.id });
+        return true;
+      } catch (resendErr) {
+        console.error('Fallback send via Resend failed', resendErr);
+        return false;
+      }
     }
-    return true;
   } catch (error) {
     console.error('Error sending contact email:', error);
     return false;
