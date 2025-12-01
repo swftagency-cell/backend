@@ -59,7 +59,10 @@ async function handleFormSubmission(e) {
         };
         
         // Send to API
-        const response = await fetch('http://localhost:3000/api/enquiry', {
+        const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+            ? 'http://localhost:3000'
+            : '';
+        const response = await fetch(`${API_BASE}/api/enquiry`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

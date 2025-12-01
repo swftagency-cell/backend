@@ -1,154 +1,20 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+const { sendEmail, renderTemplate } = require('../services/email');
 const { database } = require('../database/db');
 const { v4: uuidv4 } = require('uuid');
 
 const router = express.Router();
 
-// Email configuration
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'anushow299@gmail.com';
-const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.EMAIL_PORT || '587', 10),
-  secure: (process.env.EMAIL_SECURE || 'false') === 'true',
-  auth: {
-    user: process.env.EMAIL_USER || '',
-    pass: process.env.EMAIL_PASS || ''
-  },
-  pool: true,
-  maxConnections: 3,
-  maxMessages: 20,
-  connectionTimeout: 10000,
-  socketTimeout: 10000
-});
 
 // Send enquiry email notification
 async function sendEnquiryEmail(enquiryData) {
   try {
     const { name, email, phone, company, service, budget, timeline, message } = enquiryData;
     
-    const emailSubject = `New Enquiry - Swift Agency`;
-    const emailBody = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
-        <div style="background: linear-gradient(135deg, #001E3D 0%, #007bff 100%); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 30px;">
-          <h1 style="color: white; margin: 0; font-size: 28px;">Swift Agency</h1>
-          <p style="color: white; margin: 10px 0 0 0; font-size: 16px;">New Enquiry Received</p>
-        </div>
-        
-        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-          <h2 style="color: #333; margin-bottom: 20px; font-size: 24px;">📧 Enquiry Details</h2>
-          
-          <div style="margin-bottom: 30px;">
-            <h3 style="color: #007bff; margin-bottom: 15px; font-size: 18px;">👤 Client Information</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Name:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${name}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Email:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${email}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Phone:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${phone || 'Not provided'}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Company:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${company || 'Not provided'}</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div style="margin-bottom: 30px;">
-            <h3 style="color: #007bff; margin-bottom: 15px; font-size: 18px;">🎯 Project Information</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Service:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${service}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Budget:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${budget || 'Not specified'}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Timeline:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333;">${timeline || 'Not specified'}</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div style="margin-bottom: 30px;">
-            <h3 style="color: #007bff; margin-bottom: 15px; font-size: 18px;">💬 Message</h3>
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff;">
-              <p style="margin: 0; color: #333; line-height: 1.6;">${message}</p>
-            </div>
-          </div>
-          
-          <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-            <p style="margin: 0; color: #666; font-size: 14px;">
-              📅 Received: ${new Date().toLocaleString()}<br>
-              🌐 Swift Agency - Professional Digital Solutions
-            </p>
-          </div>
-        </div>
-      </div>
-    `;
-
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: ADMIN_EMAIL,
-      cc: email,
-      subject: emailSubject,
-      html: emailBody,
-      replyTo: email
-    };
-
-    const sendPromise = transporter.sendMail(mailOptions);
-    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email send timeout')), 5000));
-    let info;
-    try {
-      info = await Promise.race([sendPromise, timeoutPromise]);
-      if (info && info.messageId) {
-        console.log('✅ Enquiry email sent successfully', { messageId: info.messageId, response: info.response });
-      } else {
-        console.log('✅ Enquiry email send completed');
-      }
-    } catch (smtpErr) {
-      const useResend = (process.env.EMAIL_PROVIDER || '').toLowerCase() === 'resend' || !!process.env.RESEND_API_KEY;
-      if (useResend) {
-        try {
-          const apiKey = process.env.RESEND_API_KEY;
-          const resendResp = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${apiKey}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              from: process.env.EMAIL_USER,
-              to: ADMIN_EMAIL,
-              subject: emailSubject,
-              html: emailBody,
-              reply_to: email
-            })
-          });
-          const text = await resendResp.text();
-          if (!resendResp.ok) {
-            console.error('Resend API error', { status: resendResp.status, body: text });
-            throw new Error(`Resend failed: ${resendResp.status}`);
-          }
-          let parsed = {};
-          try { parsed = JSON.parse(text); } catch (_) {}
-          console.log('✅ Enquiry email sent via Resend', { id: parsed?.id });
-        } catch (resendErr) {
-          console.error('❌ Fallback send via Resend failed', resendErr);
-          throw resendErr;
-        }
-      } else {
-        throw smtpErr;
-      }
-    }
+    const t = renderTemplate('enquiry', { name, email, phone, company, service, budget, timeline, message });
+    const r = await sendEmail({ from: process.env.EMAIL_USER, to: [ADMIN_EMAIL], cc: [email], subject: t.subject, html: t.html, text: t.text, replyTo: email });
+    if (!r.ok) throw new Error(r.error || 'send failed');
     return true;
   } catch (error) {
     console.error('❌ Error sending enquiry email:', error);
@@ -237,7 +103,7 @@ router.post('/', async (req, res) => {
     }
 
     if (!emailSent && !emailErrorMessage) {
-      emailErrorMessage = 'Email not sent. Verify EMAIL_HOST/PORT/SECURE and EMAIL_USER/EMAIL_PASS.';
+      emailErrorMessage = 'Email not sent. Verify RESEND_API_KEY and EMAIL_USER (from address).';
     }
 
     res.status(201).json({
